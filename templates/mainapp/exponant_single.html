@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-container">
+
+    <main>
+
+        <div class="container-fluid no-padding page-banner">
+            <div class="container">
+
+                <div class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'exhibits' %}">Артқа</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row events-single">
+                <div class="col-md-8 col-sm-6 col-xs-6 content-area">
+                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding img-block">
+                        <img src="{{ exhibit.image.url }}" alt="Single Event"/>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding events-content">
+
+                        <h3>{{ exhibit.name }} <span></span></h3>
+                        <p> {{ exhibit.description|linebreaks }}</p>
+
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 widget-area">
+
+                    <aside class="widget ">
+                        <h3>Орналасқан мұражай</h3>
+                        <p> {{ exhibit.museum.name }}</p>
+                        <br>
+                        <br>
+                        <h3>Тарихи кезең</h3>
+                        <p> {{ exhibit.period }}</p>
+                        <br>
+                        <br>
+                        {% if exhibit.belongs %}
+                        <h3>Кімге тиесілі</h3>
+                        <p> {{ exhibit.belongs }}</p>
+                        <br>
+                        <br>
+                        {% endif %}
+
+                    </aside>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+</div>
+
+{% endblock content %}

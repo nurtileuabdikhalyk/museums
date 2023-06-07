@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="main-container">
+
+
+    <div class="container-fluid no-padding page-banner">
+        <div class="container">
+
+            <div class="page-breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'home' %}">Басты бетке өту</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row events-single">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Логин</th>
+                    <th scope="col">Есімі</th>
+                    <th scope="col">Тегі</th>
+                    <th scope="col">Телефон номер</th>
+                    <th scope="col">Жұмыс орын</th>
+                    <th scope="col">Лауазымы</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ user.user }}</td>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>
+                        {% if user.phone %}
+                        {{ user.phone }}
+                        {% endif %}
+                    </td>
+                    <td>{{ user.museum.name }}</td>
+                    <td>{% if user.position %}
+                        {{ user.position }}
+                        {% endif %}
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock content %}

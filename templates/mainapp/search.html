@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid no-padding event-section">
+    <!-- Container -->
+    <div class="container">
+        <!-- Section Header -->
+        {% if object_list %}
+        <div class="section-header">
+            <h3><span>Қазақстанның тарихи  <span>мұражайлары</span></span></h3>
+        </div><!-- Section Header /- -->
+        <!-- Row -->
+        <div class="row">
+            {% for museum in object_list %}
+            <div class="col-md-11 col-sm-6 col-xs-6">
+                <!-- Events Block -->
+                <div class="events-block">
+                    <div class="event-content">
+                        <div class="col-md-5 col-sm-12 col-xs-12 no-padding img-block">
+                            <a href="{% url 'museum_single' museum.slug %}"><img src="{{ museum.image.url }}"
+                                                                                 alt="Event"/></a>
+                        </div>
+                        <div class="col-md-7 col-sm-6 col-xs-6 events-content">
+                            <div class="post-meta">
+                                <div class="post-add"><i class="icon icon-Pointer"></i>Алматы, Қазақстан<br/>
+
+                                </div>
+                                <div class="post-date"><i class="icon icon-Time"></i> {{ museum.created|date:"d.m.Y H:i" }}
+                                </div>
+                            </div>
+                            <h3>{{ museum.name }}</h3>
+                            <p>{{ museum.description|linebreaks|truncatewords:15 }}</p>
+                            <div class="btn-block">
+                                <a href="{% url 'museum_single' museum.slug %}" title="Әрі қарай оқу">Әрі
+                                    қарай оқу <i
+                                            class="fa fa-angle-right"></i></a>
+
+                        {% if user.users.admin_status %}
+                                <a href="{% url 'museum_update' museum.slug %}" title="Өңдеу">Өңдеу</a>
+                                <a href="#" data-toggle="modal" data-target="#myModal{{ museum.id }}" title="Өшіру">Өшіру</a>
+                                {% endif %}
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal video-modal fade" id="myModal{{ museum.id }}" tabindex="-1" role="dialog"
+                 aria-labelledby="myModal{{ product.id }}">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Шыныменде өшіргіңіз келе ме?
+                            </p>
+                            <button type="button" class="btn btn-danger"><span aria-hidden="true"><a
+                                    style="color:white;"
+                                    href="{% url 'museum_delete' museum.id %}">Иә</a></span>
+                            </button>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">Жоқ</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div><!-- Row /- -->
+
+        {% else %}
+        <div class="section-header">
+            <h3><span><span>Сіздің сұраным бойынша мұражай табылмады!</span></span></h3>
+        </div>
+        {% endif %}
+    </div><!-- Container /- -->
+</div>
+
+{% endblock content %}

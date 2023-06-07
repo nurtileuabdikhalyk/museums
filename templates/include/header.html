@@ -1,0 +1,82 @@
+{% load static %}
+
+<header class="container-fluid no-padding header-section">
+
+    <!-- SidePanel -->
+    <div id="slidepanel">
+
+        <!-- Top Header -->
+        <div class="container-fluid no-padding top-header">
+            <!-- Container -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 social-block">
+                        <p>Бізді бақылаңыз:</p>
+                        <ul>
+                            <li><a href="#" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" title="Pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- Container /- -->
+        </div><!-- Top Header /- -->
+
+
+    </div><!-- SidePanel /- -->
+
+    <div class="container-fluid no-padding menu-block">
+        <!-- Container -->
+        <div class="container">
+            <!-- nav -->
+            <nav class="navbar navbar-default ow-navigation">
+
+                <div class="menu-icon">
+                    <a href="{% url 'about' %}" title="Біз туралы">Біз туралы</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        {% if user.users.admin_status %}
+                        <li><a href="{% url 'museum_create' %}" title="Мәліметтер қосу">Мұражай қосу</a></li>
+                        <li><a href="{% url 'exhibition_create' %}" title="Көрме залын қосу">Көрме залын қосу</a></li>
+                        <li><a href="{% url 'exponant_create' %}" title="Экспонант қосу">Экспонат қосу</a></li>
+                        {% endif %}
+                        <li><a href="{% url 'exhibits' %}" title="Экспонанттар">Экспонат</a></li>
+                        <li><a href="#" title="Іздеу" data-toggle="modal" data-target="#myModal"><i
+                                class="fa fa-search"></i></a></li>
+                        {% if user.is_staff %}
+                        <li><a href="{% url 'users' %}" ><i class="fa fa-user"></i></a></li>
+                        {% elif user.users.admin_status %}
+                        <li><a href="{% url 'profile' %}" ><i class="fa fa-user"></i></a></li>
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'account_logout' %}" title="Шығу"><i
+                                class="fa fa-sign-out"></i></a></li>
+                        {% else %}
+                        <li><a href="{% url 'account_signin' %}" title="Кіру">Кіру</a></li>
+                        <li><a href="{% url 'account_signup' %}" title="Тіркелу">Тіркелу</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="contact-form row" action="{% url 'search' %}" method="get">
+                    <input type="text" placeholder="Іздеу...." name="q">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

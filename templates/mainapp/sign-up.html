@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-container">
+    <div id="site-loader" class="load-complete">
+        <div class="loader">
+            <div class="loader-inner ball-clip-rotate">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+        <div id="history-section" class="container-fluid no-padding history-section">
+
+
+            <div class="col-md-12 no-padding history-details" style="margin-left:300px;margin-right:120px;">
+                <div class="col-md-10 history-box">
+                    <form class="contact-form row" action="{% url 'account_signup' %}" method="post">
+                        {% csrf_token %}
+
+                        <div class="row">
+                            <div class="col-md-7 form-group">
+                                <div class="input-group-meta mb-10">
+                                    <label>Есіміңіз</label>
+                                   {{ form.first_name }}
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-7 form-group">
+                                <div class="input-group-meta mb-10">
+
+                                    <label>Тегіңіз</label>
+                                    {{ form.last_name }}
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-7 form-group">
+                                <div class="input-group-meta mb-10">
+
+                                    <label>Логин</label>
+                                   {{ form.username }}
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-7 form-group">
+                                <div class="input-group-meta mb-10">
+
+                                    <label>Телефон</label>
+                                    {{ form.phone }}
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-7 form-group">
+                                <div class="input-group-meta mb-10">
+
+                                    <label>Құпия сөз</label>
+                                     {{ form.password1 }}
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-7 form-group">
+                                <div class="input-group-meta mb-10">
+                                    <label>Құпия сөзді қайталаңыз</label>
+                                     {{ form.password2 }}
+                                </div>
+                            </div>
+                            <div class="col-md-7 form-group">
+                                <button class="btn btn-warning">Тіркелу</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+</div>
+{% endblock content %}

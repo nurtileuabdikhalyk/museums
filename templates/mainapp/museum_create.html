@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid no-padding page-banner">
+    <div class="container">
+
+        <div class="page-breadcrumb">
+            <ol class="breadcrumb">
+                <li><a href="{% url 'home' %}">Басты бетке өту</a></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="container-fluid no-padding event-section">
+
+    <div class="container">
+        <div class="col-md-12 col-sm-12">
+            <form class="contact-form row" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="col-md-12 form-group">
+                    <label>Мұражай туралы</label>
+                    {{ form.name }}
+                </div>
+                <div class="col-md-12 form-group">
+                    {{ form.description }}
+                </div>
+                <div class="col-md-12 form-group">
+                    {{ form.map }}
+                </div>
+                <div class="col-md-12 form-group">
+                    {{ form.city }}
+                </div>
+                <div class="col-md-4 form-group">
+                    {{ form.image }}
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <button class="btn btn-warning ">Жіберу</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

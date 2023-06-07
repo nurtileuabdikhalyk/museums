@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-container">
+
+    <main>
+
+        <div class="container-fluid no-padding page-banner">
+            <div class="container">
+
+                <div class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'home' %}">Басты бетке өту</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row events-single">
+                <div class="col-md-8 col-sm-6 col-xs-6 content-area">
+                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding img-block">
+                        <img src="{{ museum.image.url }}" alt="Single Event"/>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding events-content">
+                        <div class="post-meta">
+                            <div class="post-add"><i class="icon icon-Pointer"></i>{{ museum.city }}, Қазақстан
+                            </div>
+                            <div class="post-date"><i class="icon icon-Time"></i> {{ museum.created|date:"d.m.Y H:i" }}
+                            </div>
+                        </div>
+                        <h3>{{ museum.name }} <span></span></h3>
+                        <p> {{ museum.description|linebreaks }}</p>
+
+                        {% if user.users.admin_status %}
+                        <div class="btn-block">
+                            <a href="{% url 'museum_update' museum.slug %}" title="Register now">Өңдеу</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding map-event">
+
+                        <h3>Орналасқан жері <span></span></h3>
+                        <iframe src="{{ museum.map }}"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-md-4 col-sm-6 col-xs-6 widget-area">
+
+                    <aside class="widget widget_search">
+                        <h3 class="widget-title">Көрме залдары</h3>
+                        <div class="input-group">
+                           {% for m in museum.museumimages_set.all  %}
+                            <p>{{ m.name }}</p>
+                            <img src="{{ m.image.url }}" alt="" title="{{ m.name }}">
+                            <br>
+                            <br>
+                            {% endfor %}
+                        </div>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <div class="padding-100"></div>
+    </main>
+
+
+</div>
+
+{% endblock content %}

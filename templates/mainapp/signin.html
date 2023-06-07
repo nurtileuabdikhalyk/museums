@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-container">
+    <div id="site-loader" class="load-complete">
+        <div class="loader">
+            <div class="loader-inner ball-clip-rotate">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+        <div id="history-section" class="container-fluid no-padding history-section">
+
+
+            <div class="col-md-12 no-padding history-details" style="margin-left:300px;margin-right:120px;">
+                <div class="col-md-10 history-box">
+                    <form class="contact-form row" action="{% url 'account_signin' %}" method="post">
+                        {% csrf_token %}
+
+                        <div class="row">
+                            <div class="col-md-7 form-group">
+                                <div class="input-group-meta mb-10">
+                                    <label>Аккаунт туралы</label>
+                                    <br>
+                                    <label style="color:red;">{{ messages }}</label>
+                                    {{ form.login }}
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-7 form-group">
+                                <div class="input-group-meta mb-10">
+                                    {{ form.password }}
+
+                                </div>
+                            </div>
+                            <div class="col-md-7 form-group">
+                                <button class="btn btn-warning">Кіру</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+</div>
+{% endblock content %}

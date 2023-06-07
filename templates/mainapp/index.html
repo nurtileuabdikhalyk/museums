@@ -1,0 +1,365 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main-container">
+    <!-- Loader -->
+    <div id="site-loader" class="load-complete">
+        <div class="loader">
+            <div class="loader-inner ball-clip-rotate">
+                <div></div>
+            </div>
+        </div>
+    </div><!-- Loader /- -->
+
+
+    <main>
+
+        <!-- Slider Section -->
+        <div id="slider-section" class="container-fluid no-padding slider-section">
+
+            <!-- START REVOLUTION SLIDER 5.0 -->
+            <div class="rev_slider_wrapper">
+                <div id="home-slider1" class="rev_slider" data-version="5.0">
+                    <ul>
+                        <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut"
+                            data-easeout="easeInOut" data-masterspeed="2000" data-rotate="0" data-fstransition="fade"
+                            data-fsmasterspeed="1500" data-fsslotamount="7">
+                            <!-- MAIN IMAGE -->
+                            <img src="{% static 'images/slide1.jpg' %}" alt="slider" data-bgparallax="3"
+                                 data-bgposition="center center" data-duration="30000" data-ease="Linear.easeNone"
+                                 data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0"
+                                 data-rotateend="0" data-rotatestart="0">
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0 sub-title"
+                                 id="slide-1-layer-1"
+                                 data-x="['left','left','center','center']" data-hoffset="['374','50','0','0']"
+                                 data-y="['top','top','top','top']" data-voffset="['245','245','145','55']"
+                                 data-fontsize="['48','48','48','24']"
+                                 data-fontweight="['600','600','600','600']"
+                                 data-lineheight="['56','56','56','26']"
+                                 data-width="['750','750','750','400']"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[100%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;"
+                                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-elementdelay="0.05"
+                                 style="z-index: 2; word-wrap: break-word; max-width: 100%; color: #ffffff; padding: 0; letter-spacing: -0.96px; font-family: 'Poppins', sans-serif; text-transform: uppercase;">
+                                watch new <span style="color: #e2b13c;">all exhibitions</span> <br/> in <span
+                                    style="color: #e2b13c;">max museum</span>
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0 sub-title"
+                                 id="slide-1-layer-2"
+                                 data-x="['left','left','center','center']" data-hoffset="['374','50','0','0']"
+                                 data-y="['top','top','top','top']" data-voffset="['370','370','270','120']"
+                                 data-fontsize="['18','18','18','18']"
+                                 data-fontweight="['400','400','400','400']"
+                                 data-lineheight="['24','24','24','24']"
+                                 data-width="['750','750','750','400']"
+                                 data-height="none"
+                                 data-whitespace="normal"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[100%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;"
+                                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-elementdelay="0.05"
+                                 style="z-index: 2; white-space: normal; color:#ffffff; padding: 0; letter-spacing: 1.9px; font-family: 'PT Serif', serif; font-style: italic;">
+                                A man is born he's a man of means. Then along come two they got nothin' but their <br/>
+                                jeans. But they got diff'rent strokes. It takes diff'rent strokes - it takes <br/>
+                                diff'rent strokes to move the world.
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption NotGeneric-Button rev-btn  rs-parallaxlevel-0" id="slide-1-layer-3"
+                                 data-x="['left','left','left','center']" data-hoffset="['374','50','20','-100']"
+                                 data-y="['top','top','top','top']" data-voffset="['475','475','375','260']"
+                                 data-fontsize="['16','16','16','16']"
+                                 data-fontweight="['400','400','400','400']"
+                                 data-lineheight="['20','20','20','20']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Linear.easeNone;"
+                                 data-style_hover="c:#fff;bg:#e2b13c;"
+                                 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:2500;e:Power3.easeInOut;"
+                                 data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                 data-start="3000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-actions='[{"event":"click","action":"scrollbelow","offset":"0px"}]'
+                                 data-responsive_offset="on"
+                                 data-responsive="off"
+                                 style="z-index: 9; font-family: 'Poppins', sans-serif; border: 1px solid rgba(255,255,255,0.51); padding: 13px 53px; letter-spacing: 0.975px; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
+                                Continue
+                            </div>
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption WebProduct-Button rev-btn rs-parallaxlevel-0" id="slide-1-layer-4"
+                                 data-x="['left','left','left','center']" data-hoffset="['574','270','230','-110']"
+                                 data-y="['top','top','top','top']" data-voffset="['475','475','375','335']"
+                                 data-fontsize="['16','16','16','16']"
+                                 data-fontweight="['400','400','400','400']"
+                                 data-lineheight="['20','20','20','20']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Linear.easeNone;"
+                                 data-style_hover="c:rgba(210, 150, 6, 1.00);bg:rgba(255, 255, 255, 1.00);"
+                                 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:2500;e:Power3.easeInOut;"
+                                 data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                 data-start="3000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+                                 data-responsive_offset="on"
+                                 data-responsive="off"
+                                 style="z-index: 10; padding: 13px 53px; letter-spacing: 0.975px; font-family: 'Poppins', sans-serif; background-color: #e2b13c; white-space: nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
+                                Explore
+                            </div>
+                        </li>
+
+                        <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut"
+                            data-easeout="easeInOut" data-masterspeed="2000" data-rotate="0" data-fstransition="fade"
+                            data-fsmasterspeed="1500" data-fsslotamount="7">
+                            <!-- MAIN IMAGE -->
+                            <img src="{% static 'images/slide1.jpg' %}" alt="slider" data-bgparallax="3"
+                                 data-bgposition="center center" data-duration="30000" data-ease="Linear.easeNone"
+                                 data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0"
+                                 data-rotateend="0" data-rotatestart="0">
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0 sub-title"
+                                 id="slide-2-layer-1"
+                                 data-x="['left','left','center','center']" data-hoffset="['374','50','0','0']"
+                                 data-y="['top','top','top','top']" data-voffset="['245','245','145','55']"
+                                 data-fontsize="['48','48','48','24']"
+                                 data-fontweight="['600','600','600','600']"
+                                 data-lineheight="['56','56','56','26']"
+                                 data-width="['750','750','750','400']"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[100%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;"
+                                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-elementdelay="0.05"
+                                 style="z-index: 2; word-wrap: break-word; max-width: 100%; color: #ffffff; padding: 0; letter-spacing: -0.96px; font-family: 'Poppins', sans-serif; text-transform: uppercase;">
+                                watch new <span style="color: #e2b13c;">all exhibitions</span> <br/> in <span
+                                    style="color: #e2b13c;">max museum</span>
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0 sub-title"
+                                 id="slide-2-layer-2"
+                                 data-x="['left','left','center','center']" data-hoffset="['374','50','0','0']"
+                                 data-y="['top','top','top','top']" data-voffset="['370','370','270','120']"
+                                 data-fontsize="['18','18','18','18']"
+                                 data-fontweight="['400','400','400','400']"
+                                 data-lineheight="['24','24','24','24']"
+                                 data-width="['750','750','750','400']"
+                                 data-height="none"
+                                 data-whitespace="normal"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[100%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;"
+                                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-elementdelay="0.05"
+                                 style="z-index: 2; white-space: normal; color:#ffffff; padding: 0; letter-spacing: 1.9px; font-family: 'PT Serif', serif; font-style: italic;">
+                                A man is born he's a man of means. Then along come two they got nothin' but their <br/>
+                                jeans. But they got diff'rent strokes. It takes diff'rent strokes - it takes <br/>
+                                diff'rent strokes to move the world.
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption NotGeneric-Button rev-btn  rs-parallaxlevel-0" id="slide-2-layer-3"
+                                 data-x="['left','left','left','center']" data-hoffset="['374','50','20','-100']"
+                                 data-y="['top','top','top','top']" data-voffset="['475','475','375','260']"
+                                 data-fontsize="['16','16','16','16']"
+                                 data-fontweight="['400','400','400','400']"
+                                 data-lineheight="['20','20','20','20']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Linear.easeNone;"
+                                 data-style_hover="c:#fff;bg:#e2b13c;"
+                                 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:2500;e:Power3.easeInOut;"
+                                 data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                 data-start="3000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-actions='[{"event":"click","action":"scrollbelow","offset":"0px"}]'
+                                 data-responsive_offset="on"
+                                 data-responsive="off"
+                                 style="z-index: 9; font-family: 'Poppins', sans-serif; border: 1px solid rgba(255,255,255,0.51); padding: 13px 53px; letter-spacing: 0.975px; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
+                                Continue
+                            </div>
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption WebProduct-Button rev-btn rs-parallaxlevel-0" id="slide-2-layer-4"
+                                 data-x="['left','left','left','center']" data-hoffset="['574','270','230','-110']"
+                                 data-y="['top','top','top','top']" data-voffset="['475','475','375','335']"
+                                 data-fontsize="['16','16','16','16']"
+                                 data-fontweight="['400','400','400','400']"
+                                 data-lineheight="['20','20','20','20']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Linear.easeNone;"
+                                 data-style_hover="c:rgba(210, 150, 6, 1.00);bg:rgba(255, 255, 255, 1.00);"
+                                 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:2500;e:Power3.easeInOut;"
+                                 data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                 data-start="3000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+                                 data-responsive_offset="on"
+                                 data-responsive="off"
+                                 style="z-index: 10; padding: 13px 53px; letter-spacing: 0.975px; font-family: 'Poppins', sans-serif; background-color: #e2b13c; white-space: nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
+                                Explore
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goto-next"><a href="#history-section"><i class="icon icon-Mouse bounce"></i></a></div>
+        </div><!-- Slider Section /- -->
+
+        <!-- Our History Section -->
+        <div id="history-section" class="container-fluid no-padding history-section">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h3><span>Қош келдіңіз</span></h3>
+            </div><!-- Section Header /- -->
+
+            <div class="col-md-6 img-block" data-image="{% static 'images/history-img.jpg' %}">
+                <img src="{% static 'images/index.jpg' %}" alt="History"/>
+            </div>
+            <div class="col-md-6 history-details">
+                <div class="col-md-7 history-box">
+                    <h3>Қазақстанның тарихи мұражайларының деректер қоры </h3>
+                    <p>Мұражайлар-елдің тарихи-мәдени және табиғи мұрасын жинақтау, зерделеу, сақтау және дәріптеу
+                        жөніндегі негізгі әлеуметтік-мәдени институттар. Осыған байланысты мұражай ісін дамытудың
+                        қазіргі жай-күйін зерделеу және Қазақстан мұражайлары қызметінің негізгі бағыттарына талдау
+                        жүргізу мәселелері өзекті болып табылады.</p>
+
+                    <a href="{% url 'about' %}" title="Learn more our history">Толығырақ <i
+                            class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div><!-- Our History Section /- -->
+
+
+        <!-- Event Section -->
+        <div class="container-fluid no-padding event-section">
+            <!-- Container -->
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h3><span>Қазақстанның тарихи  <span>мұражайлары</span></span></h3>
+                </div><!-- Section Header /- -->
+                <!-- Row -->
+                <div class="row">
+                    {% for museum in museums %}
+                    <div class="col-md-11 col-sm-6 col-xs-6">
+                        <!-- Events Block -->
+                        <div class="events-block">
+                            <div class="event-content">
+                                <div class="col-md-5 col-sm-12 col-xs-12 no-padding img-block">
+                                    <a href="{% url 'museum_single' museum.slug %}"><img src="{{ museum.image.url }}"
+                                                                                         alt="Event"/></a>
+                                </div>
+                                <div class="col-md-7 col-sm-6 col-xs-6 events-content">
+                                    <div class="post-meta">
+                                        <div class="post-add"><i class="icon icon-Pointer"></i>{{ museum.city }}, Қазақстан<br/>
+
+                                        </div>
+                                        <div class="post-date"><i class="icon icon-Time"></i>
+                                           {{ museum.created|date:"d.m.Y H:i" }}
+                                        </div>
+                                    </div>
+                                    <h3>{{ museum.name }}</h3>
+                                    <p>{{ museum.description|linebreaks|truncatewords:15 }}</p>
+                                    <div class="btn-block">
+                                        <a href="{% url 'museum_single' museum.slug %}" title="Әрі қарай оқу">Әрі
+                                            қарай оқу <i
+                                                    class="fa fa-angle-right"></i></a>
+
+                                        {% if user.users.admin_status %}
+                                        <a href="{% url 'museum_update' museum.slug %}" title="Өңдеу">Өңдеу</a>
+                                        <a href="#" data-toggle="modal" data-target="#myModal{{ museum.id }}"
+                                           title="Өшіру">Өшіру</a>
+                                        {% endif %}
+                                        <br>
+                                        <br>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Events Block /- -->
+                    </div>
+                    <div class="modal video-modal fade" id="myModal{{ museum.id }}" tabindex="-1" role="dialog"
+                         aria-labelledby="myModal{{ museum.id }}">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Шыныменде өшіргіңіз келе ме?
+                                    </p>
+                                    <button type="button" class="btn btn-danger"><span aria-hidden="true"><a
+                                            style="color:white;"
+                                            href="{% url 'museum_delete' museum.id %}">Иә</a></span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal"
+                                            aria-label="Close"><span
+                                            aria-hidden="true">Жоқ</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div><!-- Row /- -->
+            </div><!-- Container /- -->
+        </div><!-- Event Section /- -->
+
+
+    </main>
+
+
+</div>
+{% endblock content %}
+
+
